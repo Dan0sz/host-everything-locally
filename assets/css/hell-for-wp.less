@@ -1,0 +1,79 @@
+/* * * * * * * * * * * * * * * * * * *
+ *
+ *     ██░ ██ ▓█████  ██▓     ██▓
+ *    ▓██░ ██▒▓█   ▀ ▓██▒    ▓██▒
+ *    ▒██▀▀██░▒███   ▒██░    ▒██░
+ *    ░▓█ ░██ ▒▓█  ▄ ▒██░    ▒██░
+ *    ░▓█▒░██▓░▒████▒░██████▒░██████▒
+ *     ▒ ░░▒░▒░░ ▒░ ░░ ▒░▓  ░░ ▒░▓  ░
+ *     ▒ ░▒░ ░ ░ ░  ░░ ░ ▒  ░░ ░ ▒  ░
+ *     ░  ░░ ░   ░     ░ ░     ░ ░
+ *     ░  ░  ░   ░  ░    ░  ░    ░  ░
+ *
+ * * * * * * * * * * * * * * * * * * */
+
+.hell-nav {
+  .nav-tab {
+    &:before {
+      line-height: 1.25em;
+    }
+  }
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  height: 48px;
+  width: 48px;
+  background: url('../images/hell-icon-dark-48px.png') no-repeat top left;
+}
+
+.hell-settings-column {
+  float: left;
+  width: 75%;
+
+  &.right {
+    float: right;
+    width: 22.5%;
+  }
+
+  .row {
+    position: relative;
+    margin-top: 5px;
+
+    input[type=text] {
+      vertical-align: middle;
+    }
+  }
+}
+
+.hell-settings-column:not(.settings-hell-download) {
+  .row {
+    input[type=text] {
+      width: 300px;
+    }
+
+    select {
+      width: 150px;
+    }
+  }
+}
+
+#hell-welcome-panel {
+  margin: 0;
+
+  .align-center {
+    text-align: center;
+  }
+}
+
+.hell-minus {
+  padding: 0 0 0 20px;
+  position: relative;
+  display: inline-block;
+
+  &:before {
+    position: absolute;
+    left: 0;
+  }
+}
