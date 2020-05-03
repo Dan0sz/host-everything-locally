@@ -77,4 +77,4 @@ function wp_hell_init()
     return $hell;
 }
 
-wp_hell_init();
+add_action('plugins_loaded', 'wp_hell_init');
