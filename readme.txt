@@ -1,14 +1,14 @@
-=== HELL | Host Everything LocaL ===
+=== Host 3rd Party JS/CSS Locally & Clean/Optimize WP's Header ===
 Contributors: DaanvandenBergh
-Tags: head, scripts, style, host, local
+Tags: optimize, clean, head, scripts, styles, host, local
 Requires at least: 5.3
 Tested up to: 5.4
 Requires PHP: 7.0
-Stable tag: 1.3.1
+Stable tag: 1.4.0
 License: CC-BY-4.0
 License URI: https://creativecommons.org/licenses/by/4.0/
 
-The Swiss Army knife for WordPress' `<head>`. Speed up WordPress so much it hurts!
+Your Swiss Army knife for optimizing WordPress' `<head>`. Speed up WordPress so much it hurts!
 
 == Description ==
 
@@ -23,18 +23,18 @@ With HELL for WordPress you can **remove** any script and/or style loaded by any
 * **Remove** scripts/styles from the `<head>` by either filename or handle,
 * Automatically **download** externally hosted scripts/styles and **replace** them with a local copy,
 * Add DNS-prefetch or Preconnect headers,
-* Add Preload headers for any resource.
+* Add Preload headers for any local resource and specify the type.
 
 = Disclaimer =
 
 HELL for WordPress can break the functioning of your theme and plugins. Handle with care. If you don't
-know what you're doing, please contact your webdeveloper or [hire me](https://woosh.dev/wordpress-services/omgf-expert-configuration/).
+know what you're doing, please contact your webdeveloper.
 
 == Frequently Asked Questions ==
 
 = I don't know what I'm doing. Can you help? =
 
-Due to the complex nature of this plugin, I'm not offering help with configuration for free. Instead I'm offering a [full configuration service](https://woosh.dev/wordpress-services/hell-expert-configuration/). Of course, a bug report or suggestions to improve its usability can be issued in the Support Forum!
+Due to the complex nature of this plugin, I'm not offering help with configuration for free. Configuration of this plugin is part of my [WordPress Speed Optimization](https://woosh.dev/wordpress-services/speed-optimization/) service. Of course, a bug report or suggestions to improve its usability can be issued in the Support Forum!
 
 == Screenshots ==
 
@@ -43,6 +43,12 @@ Due to the complex nature of this plugin, I'm not offering help with configurati
 3. Remove scripts/styles example.
 
 == Changelog ==
+
+= 1.4.0 =
+* Added General Settings tab
+* Optimization for logged in users, now needs to be enabled specifically.
+* Removed ad for HELL Expert Configuration, as I'm not offering that anymore (too complicated product for end users)
+* HELL is now triggered last in plugins loading order.
 
 = 1.3.1 =
 * Tested with WP 5.4
