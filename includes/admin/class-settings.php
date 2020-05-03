@@ -77,7 +77,7 @@ class HELL_Admin_Settings
         // @formatter:off
         add_options_page(
             'Host Everything LocaL (HELL) for WordPress',
-            'Optimize Everything',
+            'Optimize WP Head',
             'manage_options',
             'hell_for_wp',
             [$this, 'settings_page']
