@@ -4,7 +4,7 @@
  * Plugin Name: HELL
  * Plugin URI: https://woosh.dev/wordpress-services/host-everything-local
  * Description: Speed up WordPress so much it hurts.
- * Version: 1.4.0
+ * Version: 1.4.1
  * Author: Daan van den Bergh
  * Author URI: https://daan.dev
  * License: GPL2v2 or later
@@ -19,7 +19,7 @@ defined('ABSPATH') || exit;
  */
 define('WP_HELL_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('WP_HELL_PLUGIN_FILE', __FILE__);
-define('WP_HELL_PLUGIN_VERSION', '1.4.0');
+define('WP_HELL_PLUGIN_VERSION', '1.4.1');
 
 /**
  * Takes care of loading classes on demand.

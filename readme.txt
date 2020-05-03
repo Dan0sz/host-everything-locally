@@ -4,7 +4,7 @@ Tags: optimize, clean, head, scripts, styles, host, local
 Requires at least: 5.3
 Tested up to: 5.4
 Requires PHP: 7.0
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: CC-BY-4.0
 License URI: https://creativecommons.org/licenses/by/4.0/
 
@@ -44,7 +44,7 @@ Due to the complex nature of this plugin, I'm not offering help with configurati
 
 == Changelog ==
 
-= 1.4.0 =
+= 1.4.1 =
 * Added General Settings tab
 * Optimization for logged in users, now needs to be enabled specifically.
 * Removed ad for HELL Expert Configuration, as I'm not offering that anymore (too complicated product for end users)
