@@ -46,7 +46,7 @@ class HELL_Frontend_Preload
             $url         = $item['href'];
             $as          = $item['as'];
             $type        = $item['type'];
-            $crossorigin = isset($item['crossorigin']) ? 'crossorigin' : '';
+            $crossorigin = isset($item['crossorigin']) ? 'crossorigin="anonymous"' : '';
 
             $this->preload($url, $as, $type, $crossorigin);
         }
