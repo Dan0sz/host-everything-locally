@@ -4,7 +4,7 @@ Tags: optimize, clean, head, scripts, styles, host, local
 Requires at least: 5.3
 Tested up to: 5.4
 Requires PHP: 7.0
-Stable tag: 1.4.2
+Stable tag: 1.4.3
 License: CC-BY-4.0
 License URI: https://creativecommons.org/licenses/by/4.0/
 
@@ -43,6 +43,9 @@ Due to the complex nature of this plugin, I'm not offering help with configurati
 3. Remove scripts/styles example.
 
 == Changelog ==
+
+= 1.4.3 =
+* Preload now complies with new standards set by Mozilla.
 
 = 1.4.2 =
 * Changed Plugin URI
