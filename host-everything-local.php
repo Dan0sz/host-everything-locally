@@ -2,7 +2,7 @@
 /**
  * @formatter:off
  * Plugin Name: HELL
- * Plugin URI: https://woosh.dev/wordpress-services/host-everything-local
+ * Plugin URI: https://daan.dev/wordpress-plugins/hell/
  * Description: Speed up WordPress so much it hurts.
  * Version: 1.4.1
  * Author: Daan van den Bergh
