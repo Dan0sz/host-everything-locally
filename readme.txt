@@ -23,7 +23,7 @@ With HELL for WordPress you can **remove** any script and/or style loaded by any
 * **Remove** scripts/styles from the `<head>` by either filename or handle,
 * Automatically **download** externally hosted scripts/styles and **replace** them with a local copy,
 * Add DNS-prefetch or Preconnect headers,
-* Add Preload headers for any local resource and specify the type.
+* Add Preload headers for any local resource and specify the MIME-type.
 
 = Disclaimer =
 
