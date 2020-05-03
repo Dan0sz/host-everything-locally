@@ -18,12 +18,14 @@ defined('ABSPATH') || exit;
 class HELL_Admin_Settings
 {
     // Sections
+    const WP_HELL_ADMIN_SECTION_GENERAL    = 'hell-general';
     const WP_HELL_ADMIN_SECTION_REMOVE     = 'hell-remove';
     const WP_HELL_ADMIN_SECTION_DOWNLOAD   = 'hell-download';
     const WP_HELL_ADMIN_SECTION_PRECONNECT = 'hell-preconnect';
     const WP_HELL_ADMIN_SECTION_PRELOAD    = 'hell-preload';
 
     // Settings
+    const WP_HELL_SETTING_GENERAL_OPTIMIZE_ADMIN_USERS = 'wp_hell_general_optimize_admin_users';
     const WP_HELL_SETTING_REMOVE                       = 'wp_hell_remove';
     const WP_HELL_SETTING_DOWNLOAD_AUTO_DETECT_ENABLED = 'wp_hell_auto_detect_enabled';
     const WP_HELL_SETTING_DOWNLOAD                     = 'wp_hell_download';
@@ -41,7 +43,7 @@ class HELL_Admin_Settings
      */
     public function __construct()
     {
-        $this->active_tab = isset($_GET['tab']) ? $_GET['tab'] : self::WP_HELL_ADMIN_SECTION_REMOVE;
+        $this->active_tab = isset($_GET['tab']) ? $_GET['tab'] : self::WP_HELL_ADMIN_SECTION_GENERAL;
         $this->page       = isset($_GET['page']) ? $_GET['page'] : '';
 
         // @formatter:off
@@ -56,6 +58,7 @@ class HELL_Admin_Settings
         add_action('admin_enqueue_scripts', [$this, 'enqueue_admin']);
 
         // Tabs
+        add_action('hell_settings_tab', [$this, 'do_general_tab']);
         add_action('hell_settings_tab', [$this, 'do_remove_tab']);
         add_action('hell_settings_tab', [$this, 'do_download_tab']);
         add_action('hell_settings_tab', [$this, 'do_preconnect_tab']);
@@ -143,7 +146,7 @@ class HELL_Admin_Settings
             && $this->active_tab !== self::WP_HELL_ADMIN_SECTION_DOWNLOAD
             && $this->active_tab !== self::WP_HELL_ADMIN_SECTION_PRECONNECT
             && $this->active_tab !== self::WP_HELL_ADMIN_SECTION_PRELOAD) {
-            $this->active_tab = self::WP_HELL_ADMIN_SECTION_REMOVE;
+            $this->active_tab = self::WP_HELL_ADMIN_SECTION_GENERAL;
         }
 
         foreach ($this->get_settings() as $constant => $value) {
@@ -173,6 +176,14 @@ class HELL_Admin_Settings
             },
             ARRAY_FILTER_USE_KEY
         );
+    }
+
+    /**
+     * General Settings
+     */
+    public function do_general_tab()
+    {
+        $this->generate_tab(self::WP_HELL_ADMIN_SECTION_GENERAL, 'dashicons-admin-tools', __('General Settings', 'host-everything-local'));
     }
 
     /**
@@ -262,6 +273,10 @@ class HELL_Admin_Settings
                 <span class="button <?= $detect_class; ?> hell-detect"><?= $auto_detect ? __('Auto Detect Enabled', 'host-everything-local') : __('Auto Detect', 'host-everything-local'); ?></span>
                 <span class="button <?= $download_class; ?> hell-download"><?= __('Download', 'host-everything-local'); ?></span>
                 <?php submit_button(__('Apply Changes', 'host-everything-local'), 'secondary', 'submit', false); ?>
+            </p>
+        <?php elseif ($this->active_tab == self::WP_HELL_ADMIN_SECTION_GENERAL): ?>
+            <p>
+                <?php submit_button(null, 'primary', 'submit', false); ?>
             </p>
         <?php else: ?>
             <p>

@@ -64,6 +64,7 @@ class HELL
         $preload    = get_option(HELL_Admin_Settings::WP_HELL_SETTING_PRELOAD);
 
         define('WP_HELL_SITE_URL', 'https://daan.dev/');
+        define('WP_HELL_GENERAL_OPTIMIZE_ADMIN_USERS', get_option(HELL_Admin_Settings::WP_HELL_SETTING_GENERAL_OPTIMIZE_ADMIN_USERS));
         define('WP_HELL_REMOVE', is_array($remove) ? $remove : self::WP_HELL_DEFAULT_REMOVE);
         define('WP_HELL_DOWNLOAD', get_option(HELL_Admin_Settings::WP_HELL_SETTING_DOWNLOAD));
         define('WP_HELL_AUTO_DETECT_ENABLED', get_option(HELL_Admin_Settings::WP_HELL_SETTING_DOWNLOAD_AUTO_DETECT_ENABLED));

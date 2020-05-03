@@ -22,6 +22,10 @@ class HELL_Frontend
      */
     public function __construct()
     {
+        if (!WP_HELL_GENERAL_OPTIMIZE_ADMIN_USERS && current_user_can('edit_pages')) {
+            return;
+        }
+
         if (get_option(HELL_Admin_Settings::WP_HELL_SETTING_REMOVE)) {
             $this->do_remove();
         }
