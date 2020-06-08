@@ -1,7 +1,7 @@
 === Host 3rd Party JS/CSS Locally & Clean/Optimize WP's Header ===
 Contributors: DaanvandenBergh
 Tags: optimize, clean, head, scripts, styles, host, local
-Requires at least: 5.3
+Requires at least: 5.2
 Tested up to: 5.4
 Requires PHP: 7.0
 Stable tag: 1.4.3
