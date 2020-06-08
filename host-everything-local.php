@@ -55,7 +55,7 @@ function wp_hell_autoload($class)
 
         $pieces = preg_split('/(?=[A-Z])/', lcfirst($path[$i]));
 
-        $filename .= 'class-' . strtolower(implode($pieces, '-')) . '.php';
+        $filename .= 'class-' . strtolower(implode('-', $pieces)) . '.php';
     }
 
     return include WP_HELL_PLUGIN_DIR . 'includes/' . $filename;

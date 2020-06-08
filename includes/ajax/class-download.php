@@ -84,12 +84,12 @@ class HELL_AJAX_Download
         }
 
         if ($files_downloaded) {
-            $message = implode($files_downloaded, ', ');
+            $message = implode(', ', $files_downloaded);
             $message .= ' downloaded successfully. ';
         }
 
         if ($files_failed) {
-            $message .= implode($files_failed, ',');
+            $message .= implode(',', $files_failed);
             $message .= ' failed.';
 
             HELL_Admin_Notice::set_notice($message, 'error');
