@@ -4,7 +4,7 @@
  * Plugin Name: HELL
  * Plugin URI: https://daan.dev/wordpress-plugins/hell/
  * Description: Speed up WordPress so much it hurts.
- * Version: 1.4.3
+ * Version: 1.4.4
  * Author: Daan van den Bergh
  * Author URI: https://daan.dev
  * License: GPL2v2 or later
